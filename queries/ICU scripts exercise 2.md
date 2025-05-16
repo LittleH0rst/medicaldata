@@ -29,12 +29,54 @@ WHERE label ILIKE '% nursing home %' OR label ILIKE 'nursing home %' OR label IL
 
 SELECT itemid, label, abbreviation, linksto, category, param_type 
 FROM d_items 
-WHERE label ILIKE '% confusion %' OR label ILIKE 'confusion %' OR label ILIKE '% confusion' OR label ILIKE 'confusion'
-   OR label ILIKE '% mental instability %' OR label ILIKE 'mental instability %' OR label ILIKE '% mental instability' OR label ILIKE 'mental instability'
-   OR abbreviation ILIKE '% confusion %' OR abbreviation ILIKE 'confusion %' OR abbreviation ILIKE '% confusion' OR abbreviation ILIKE 'confusion'
-   OR abbreviation ILIKE '% mental instability %' OR abbreviation ILIKE 'mental instability %' OR abbreviation ILIKE '% mental instability' OR abbreviation ILIKE 'mental instability';
+WHERE
+    -- General mental status terms
+    label ILIKE '% mental status %' OR label ILIKE 'mental status %' OR label ILIKE '% mental status' OR label ILIKE 'mental status'
+    OR label ILIKE '% level of consciousness %' OR label ILIKE 'level of consciousness %' OR label ILIKE '% level of consciousness' OR label ILIKE 'level of consciousness'
+    OR label ILIKE '% LOC %' OR label ILIKE 'LOC %' OR label ILIKE '% LOC' OR label ILIKE 'LOC'
+    OR label ILIKE '% alertness %' OR label ILIKE 'alertness %' OR label ILIKE '% alertness' OR label ILIKE 'alertness'
+    OR label ILIKE '% orientation %' OR label ILIKE 'orientation %' OR label ILIKE '% orientation' OR label ILIKE 'orientation'
+    OR label ILIKE '% confusion %' OR label ILIKE 'confusion %' OR label ILIKE '% confusion' OR label ILIKE 'confusion'
+    OR label ILIKE '% delirium %' OR label ILIKE 'delirium %' OR label ILIKE '% delirium' OR label ILIKE 'delirium'
+    OR label ILIKE '% stupor %' OR label ILIKE 'stupor %' OR label ILIKE '% stupor' OR label ILIKE 'stupor'
+    OR label ILIKE '% coma %' OR label ILIKE 'coma %' OR label ILIKE '% coma' OR label ILIKE 'coma'
+    OR label ILIKE '% Glasgow Coma Scale %' OR label ILIKE 'Glasgow Coma Scale %' OR label ILIKE '% Glasgow Coma Scale' OR label ILIKE 'Glasgow Coma Scale'
+    OR label ILIKE '% GCS %' OR label ILIKE 'GCS %' OR label ILIKE '% GCS' OR label ILIKE 'GCS'
+    OR label ILIKE '% cognitive status %' OR label ILIKE 'cognitive status %' OR label ILIKE '% cognitive status' OR label ILIKE 'cognitive status'
+	 OR abbreviation ILIKE '% mental status %' OR abbreviation ILIKE 'mental status %' OR abbreviation ILIKE '% mental status' OR abbreviation ILIKE 'mental status'
+    OR abbreviation ILIKE '% level of consciousness %' OR abbreviation ILIKE 'level of consciousness %' OR abbreviation ILIKE '% level of consciousness' OR abbreviation ILIKE 'level of consciousness'
+    OR abbreviation ILIKE '% LOC %' OR abbreviation ILIKE 'LOC %' OR abbreviation ILIKE '% LOC' OR abbreviation ILIKE 'LOC'
+    OR abbreviation ILIKE '% alertness %' OR abbreviation ILIKE 'alertness %' OR abbreviation ILIKE '% alertness' OR abbreviation ILIKE 'alertness'
+    OR abbreviation ILIKE '% orientation %' OR abbreviation ILIKE 'orientation %' OR abbreviation ILIKE '% orientation' OR abbreviation ILIKE 'orientation'
+    OR abbreviation ILIKE '% confusion %' OR abbreviation ILIKE 'confusion %' OR abbreviation ILIKE '% confusion' OR abbreviation ILIKE 'confusion'
+    OR abbreviation ILIKE '% delirium %' OR abbreviation ILIKE 'delirium %' OR abbreviation ILIKE '% delirium' OR abbreviation ILIKE 'delirium'
+    OR abbreviation ILIKE '% stupor %' OR abbreviation ILIKE 'stupor %' OR abbreviation ILIKE '% stupor' OR abbreviation ILIKE 'stupor'
+    OR abbreviation ILIKE '% coma %' OR abbreviation ILIKE 'coma %' OR abbreviation ILIKE '% coma' OR abbreviation ILIKE 'coma'
+    OR abbreviation ILIKE '% Glasgow Coma Scale %' OR abbreviation ILIKE 'Glasgow Coma Scale %' OR abbreviation ILIKE '% Glasgow Coma Scale' OR abbreviation ILIKE 'Glasgow Coma Scale'
+    OR abbreviation ILIKE '% GCS %' OR abbreviation ILIKE 'GCS %' OR abbreviation ILIKE '% GCS' OR abbreviation ILIKE 'GCS'
+    OR abbreviation ILIKE '% cognitive status %' OR abbreviation ILIKE 'cognitive status %' OR abbreviation ILIKE '% cognitive status' OR abbreviation ILIKE 'cognitive status';
 
-- no result
+228977	Altered Mental Status  NCP - Interventions	AMS NCP - Interventions	chartevents	Care Plans	Text
+229089	Altered Mental Status  NCP - Problem resolved	AMS NCP - Problem resolved	chartevents	Care Plans	Text
+229088	Altered Mental Status  NCP - Plan revised	AMS NCP - Plan revised	chartevents	Care Plans	Text
+228973	Altered Mental Status  NCP - Expected outcomes	AMS NCP - Expected outcomes	chartevents	Care Plans	Text
+228975	Altered Mental Status  NCP - Goal	AMS NCP - Goal	chartevents	Care Plans	Text
+228979	Altered Mental Status  NCP - outcomes met	AMS NCP - outcomes met	chartevents	Care Plans	Text
+223901	GCS - Motor Response	Motor Response	chartevents	Neurological	Text
+223900	GCS - Verbal Response	Verbal Response	chartevents	Neurological	Text
+220739	GCS - Eye Opening	Eye Opening	chartevents	Neurological	Text
+228395	Orientation to Place	Orientation to Place	chartevents	Neurological	Text
+228394	Orientation to Person	Orientation to Person	chartevents	Neurological	Text
+229381	Orientation	Orientation	chartevents	Neurological	Text
+223898	Orientation	Orientation	chartevents	Neurological	Text
+228396	Orientation to Time	Orientation to Time	chartevents	Neurological	Text
+226104	Level of Consciousness	Level of Consciousness	chartevents	Neurological	Text
+228302	CAM-ICU RASS LOC	CAM-ICU RASS LOC	chartevents	Pain/Sedation	Text
+228332	Delirium assessment	Delirium assessment	chartevents	Pain/Sedation	Text
+228334	CAM-ICU Altered LOC	CAM-ICU Altered LOC	chartevents	Pain/Sedation	Text
+228688	Delirium	Delirium	chartevents	MD Progress Note	Text
+227346	Mental status	Mental status	chartevents	Restraint/Support Systems	Text
+229382	Orientation Score (new)_OLD_1	Orientation Score (new)_OLD_1	chartevents	Neurological	Numeric
 
 SELECT itemid, label, abbreviation, linksto, category, param_type 
 FROM d_items 
