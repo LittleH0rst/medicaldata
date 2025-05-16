@@ -25,6 +25,7 @@ WHERE label ILIKE '% nursing home %' OR label ILIKE 'nursing home %' OR label IL
    OR abbreviation ILIKE '% nursing home resident %' OR abbreviation ILIKE 'nursing home resident %' OR abbreviation ILIKE '% nursing home resident' OR abbreviation ILIKE 'nursing home resident';
 
 - no result
+- admission location, discharge location 
 
 SELECT itemid, label, abbreviation, linksto, category, param_type 
 FROM d_items 
